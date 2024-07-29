@@ -2,8 +2,8 @@
 
 import {useContext, useEffect, useState} from "react";
 import { webAppContext } from "../context";
-import Profile from "@/components/screens/profile/profile"
-import CoinMania from "@/components/screens/main/main";
+import Profile from "@/components/screens_new/profile/profile"
+import CoinMania from "@/components/screens_new/main/main";
 import Loader from "@/components/loader/loader";
 
 export default function Home() {

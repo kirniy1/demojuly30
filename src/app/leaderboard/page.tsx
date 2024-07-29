@@ -2,7 +2,7 @@
 
 import { useContext } from "react";
 import { webAppContext } from "../context";
-import Leaderboard from "@/components/screens/leaderboard/leaderboard"
+import Leaderboard from "@/components/screens_new/leaderboard/leaderboard"
 
 export default function Home() {
     const app = useContext(webAppContext);

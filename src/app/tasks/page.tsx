@@ -2,7 +2,7 @@
 
 import {useContext, useEffect, useState} from "react";
 import { webAppContext } from "../context";
-import Tasks from "@/components/screens/tasks/tasks"
+import Tasks from "@/components/screens_new/tasks/tasks"
 import Loader from "@/components/loader/loader";
 
 export default function Home() {
