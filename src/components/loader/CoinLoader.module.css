@@ -1,0 +1,99 @@
+@keyframes spin {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.coin {
+    background: #FFDE00;
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: spin 2s linear infinite;
+}
+
+.coin::before {
+    background-color: #FF9900;
+    position: absolute;
+    border-radius: 50%;
+    content: '';
+    height: 10em;
+    width: 10em;
+    transform: translateZ(-0.75em);
+}
+
+.coin::after {
+    background-color: #CC7A00; /* Darker color for the edge */
+    content: '';
+    left: 4.25em;
+    position: absolute;
+    height: 10em;
+    width: 0.75em;
+    z-index: -10;
+    transform: rotateY(-90deg);
+    transform-origin: 100% 50%;
+}
+
+.heads, .tails {
+    position: absolute;
+    border-radius: 50%;
+    height: 10em;
+    width: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.heads {
+    background-color: #FFDE00;
+    transform: translateZ(0.755em);
+}
+
+.tails {
+    background-color: #FF9900;
+    transform: translateZ(-0.755em) rotateY(180deg);
+}
+
+.logo {
+    background-image: url('/images/logo.svg');
+}
+
+@keyframes typing {
+    0% {
+        content: "L";
+    }
+    14% {
+        content: "Lo";
+    }
+    28% {
+        content: "Loa";
+    }
+    42% {
+        content: "Load";
+    }
+    56% {
+        content: "Loadi";
+    }
+    70% {
+        content: "Loadin";
+    }
+    84% {
+        content: "Loading";
+    }
+    100% {
+        content: "Loading";
+    }
+}
+
+.typing::before {
+    content: "L";
+    animation: typing 1.4s steps(7, end) infinite;
+}

@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.highlight {
+    border: 2px solid blue;
+}
+
+@keyframes scroll {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+
+.animate-scroll {
+    animation: scroll 1s linear infinite;
+}
+
+.slot-machine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 192px; /* 3 ряда по 64px */
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+.slot-machine div {
+    height: 64px; /* Высота одного ряда */
+    width: 64px; /* Ширина одного эмодзи */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slot-machine .highlight {
+    border: 2px solid blue;
+    border-radius: 8px;
+}
+
+@keyframes float {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+.float-animation {
+    animation: float 0.3s ease-in-out forwards;
+}
+
+/* Общие стили для изображений */
+.header-image {
+    width: 100%;
+    max-width: 300px;
+}
+
+.coin-image {
+    width: 50vw;
+    max-width: 300px;
+    height: auto;
+}
+
+/* Медиа-запросы для адаптации под разные экраны */
+@media (max-width: 375px) { /* iPhone SE */
+    .header-image {
+        width: 80%;
+    }
+    .coin-image {
+        width: 70vw;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 667px) { /* iPhone 6, 7, 8, iPhone 12 mini */
+    .header-image {
+        width: 70%;
+    }
+    .coin-image {
+        width: 60vw;
+    }
+}
+
+@media (min-width: 668px) and (max-width: 736px) { /* iPhone 6 Plus, 7 Plus, 8 Plus */
+    .header-image {
+        width: 60%;
+    }
+    .coin-image {
+        width: 50vw;
+    }
+}
+
+@media (min-width: 737px) and (max-width: 812px) { /* iPhone X, XS, 11 Pro */
+    .header-image {
+        width: 60%;
+    }
+    .coin-image {
+        width: 45vw;
+    }
+}
+
+@media (min-width: 813px) and (max-width: 896px) { /* iPhone XR, 11, 11 Pro Max */
+    .header-image {
+        width: 50%;
+    }
+    .coin-image {
+        width: 40vw;
+    }
+}
+
+@media (min-width: 897px) and (max-width: 926px) { /* iPhone 12, 12 Pro, 12 Pro Max, 13, 13 Pro, 13 Pro Max */
+    .header-image {
+        width: 50%;
+    }
+    .coin-image {
+        width: 40vw;
+    }
+}
+
+@media (min-width: 927px) and (max-width: 1024px) { /* iPhone 14, 14 Plus, 14 Pro, 14 Pro Max, 15, 15 Plus, 15 Pro, 15 Pro Max */
+    .header-image {
+        width: 40%;
+    }
+    .coin-image {
+        width: 35vw;
+    }
+}
+

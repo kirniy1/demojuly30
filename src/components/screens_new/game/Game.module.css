@@ -1,0 +1,23 @@
+.container {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to top, #842221, black);
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+    margin-bottom: 100px; /* Добавлено для маленьких экранов */
+}
+
+@media (min-width: 576px) {
+    .content {
+        margin-bottom: 0; /* Убираем нижний отступ для больших экранов */
+    }
+}
